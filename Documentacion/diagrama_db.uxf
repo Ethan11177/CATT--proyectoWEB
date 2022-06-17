@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>11</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>770</x>
+      <y>44</y>
+      <w>462</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>PROFESOR
+--
+CORREO_ELECTRONICO(PK) | VARCHAR(60) | NOT NULL
+CONTRASEÑA | VARCHAR(8) | NOT NULL
+NOMBRE | VARCHAR(60) | NOT NULL
+APELLIDOS | VARCHAR(70) | NOTNULL
+TELEFONO | VARCHAR(15) | NOT NULL</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>165</x>
+      <y>319</y>
+      <w>385</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>EQUIPO_ALUMNOS
+--
+ID_EQUIPO(PK) | INT(10) | NOT NULL
+LIDER_BOLETA(FK) | INT(10) | NOT NULL
+INTEGRANTE1 | INT(10) | NULL
+INTEGRANTE2 | INT(10) | NULL
+INTEGRANTE3 | INT(10) | NULL
+INTEGRANTE4 | INT(10) | NULL</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>319</x>
+      <y>187</y>
+      <w>55</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1..n
+m2=1..1</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>143</x>
+      <y>55</y>
+      <w>462</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>ALUMNO
+--
+BOLETA(PK) | INT(10) | NOT NULL
+CONTRASEÑA | VARCHAR(8) | NOT NULL
+NOMBRE | VARCHAR(60) | NOT NULL
+APELLIDOS | VARCHAR(70) | NOTNULL
+CORREO_ELECTRONICO(PK) 	| VARCHAR(50) | NOT NULL
+TELEFONO | VARCHAR(15) | NOT NULL</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>605</x>
+      <y>341</y>
+      <w>440</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>SINODAL
+--
+ID_SINODAL(PK) | INT(10) | NOT NULL
+CORREO_ELECTRONICO(FK) | VARCHAR(60) | NOT NULL</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>660</x>
+      <y>121</y>
+      <w>198</w>
+      <h>242</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1..n
+m2=1..n</panel_attributes>
+    <additional_attributes>140.0;200.0;140.0;120.0;10.0;120.0;10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1067</x>
+      <y>341</y>
+      <w>451</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>DIRECTOR
+--
+ID_DIRECTOR(PK) | INT(10) | NOT NULL
+CORREO_ELECTRONICO(FK) | VARCHAR(60) | NOT NULL</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1199</x>
+      <y>165</y>
+      <w>176</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1..1
+m2=1..n</panel_attributes>
+    <additional_attributes>120.0;160.0;120.0;90.0;10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>638</x>
+      <y>528</y>
+      <w>341</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>EQUIPO_SINODALES
+--
+ID_EQUIPO(PK) | INT(10) | NOT NULL
+ID_SINODAL1(FK) | INT(10) | NOT NULL
+ID_SINODAL2(FK) | INT(10) | NOT NULL
+ID_SINODAL3(FK) | INT(10) | NOT NULL</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>836</x>
+      <y>407</y>
+      <w>55</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=3..1
+m2=1..n</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1122</x>
+      <y>528</y>
+      <w>341</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>EQUIPO_DIRECTORES
+--
+ID_EQUIPO(PK) | INT(10) | NOT NULL
+ID_DIRECTOR1(FK) | INT(10) | NOT NULL
+ID_DIRECTOR(FK) | INT(10) | NOT NULL
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1309</x>
+      <y>407</y>
+      <w>55</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=2..1
+m2=1..1</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>539</x>
+      <y>737</y>
+      <w>418</w>
+      <h>165</h>
+    </coordinates>
+    <panel_attributes>TRABAJO_TERMINAL
+--
+ID_TT(PK) | INT(10) | NOT NULL
+TITULO_TT | VARCHAR(300) | NOT NULL
+DESCRIPCION_TT | VARCHAR(600) | NOT NULL
+ID_EQUIPO(FK) | INT(10) | NOT NULL
+ID_EQUIPO_SINODALES(FK) | INT(10) | NOT NULL
+ID_EQUIPO_DIRECTORES(FK) | INT(10) | NOT NULL
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>341</x>
+      <y>462</y>
+      <w>220</w>
+      <h>385</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1..1
+m2=1..1</panel_attributes>
+    <additional_attributes>180.0;320.0;10.0;320.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>803</x>
+      <y>627</y>
+      <w>55</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1..1
+m2=1..n</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>946</x>
+      <y>627</y>
+      <w>407</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1..1
+m2=1..n</panel_attributes>
+    <additional_attributes>10.0;170.0;330.0;170.0;330.0;10.0</additional_attributes>
+  </element>
+</diagram>

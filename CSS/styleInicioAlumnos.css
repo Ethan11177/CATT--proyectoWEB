@@ -1,0 +1,166 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.cabeza{
+    width: 100%;
+    display: flex;
+    height: 60px;
+    background: -webkit-linear-gradient(left, #FFFFFF 10%, #0097E3, #005681);
+    background: -moz-linear-gradient(left, #FFFFFF 10%, #0097E3, #005681);
+    background: -o-linear-gradient(left, #FFFFFF 10%, #0097E3, #005681);
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    padding: 5px;
+}
+img[src="IMG/Escudo.png"]{
+    height: auto;
+    margin: 0 15px 0 30px;
+    border: 90%;
+}
+.navegacion{
+    width: 100%;
+    display: flex;
+    margin: 0 30px 0 20px;
+    align-self: center;
+}
+.navegacion>ul{
+    display: flex;
+    width: 100%;
+    align-self: center;
+}
+.navegacion>ul>li{
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    margin: 0 2px 0 2px;
+    height: 60px;
+    align-items: center;
+    transition: all 300ms;
+}
+.navegacion>ul>li>a{
+    font-size: 15px;
+}
+.navegacion>ul>li:hover{
+    transform: scale(1.15);
+    background: #9CDCFE;
+    font-weight: bold;
+}
+.pie{
+    background: -webkit-linear-gradient(top, #FFFFFF, #9CDCFE);
+    background: -o-linear-gradient(top, #FFFFFF, #9CDCFE);
+    background: -moz-linear-gradient(top, #FFFFFF, #9CDCFE);
+    padding: 5px;
+}
+.pie>p{
+    text-align: center;
+    padding: 2px;
+    margin: 5px;
+}
+.pie>div{
+    text-align: center;
+}
+.pie>div>a{
+    margin: 5px 10px;
+}
+/*CUERPO DE LA PAGINA*/
+main{
+    min-height: calc(100vh - 60px - 141px);
+}
+.cuerpo>div{
+    margin: 20px;
+}
+.cuerpo>div>img{
+    display: block;
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100%;
+    border: 2px solid;
+}
+h2{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    padding: 25px;
+}
+/*Diseño responsive*/
+@media(max-width: 1024px){
+    .cuerpo>div{
+        flex-wrap: wrap;
+    }
+}
+@media(max-width: 768px){
+    img[src="IMG/Escudo.png"]{
+        margin: 0 20px;
+        border: 90%;
+    }
+    .navegacion{
+        margin: 0 5px;
+        padding: 2px;
+    }
+    .navegacion>ul>li{
+        margin: 0 2px;
+        height: 60px;
+    }
+}
+@media(max-width: 425px){
+    img[src="IMG/Escudo.png"]{
+        margin: 0 10px;
+        border: 90%;
+    }
+    .navegacion{
+        margin: 0 5px;
+        padding: 2px;
+    }
+    .navegacion>ul>li{
+        margin: 0 2px;
+        height: 60px;
+    }
+}
+@media(max-width: 375px){
+    img[src="IMG/Escudo.png"]{
+        margin: 0 5px;
+        border: 90%;
+    }
+    .navegacion{
+        margin: 0 5px;
+        padding: 2px;
+    }
+    .navegacion>ul>li{
+        margin: 0 2px;
+        height: 60px;
+    }
+}
+@media(max-width: 320px){
+    img[src="IMG/Escudo.png"]{
+        margin: 0 5px;
+        border: 90%;
+    }
+    .navegacion{
+        margin: 0 5px;
+        padding: 2px;
+    }
+    .navegacion>ul>li{
+        margin: 0 2px;
+        height: 60px;
+    }
+    p, ol>li, a, .navegacion>ul>li>a{
+        font-size: 12px;
+    }
+    .cuerpo>div>img{
+        height: 200px;
+        width: 200px;
+    }
+}

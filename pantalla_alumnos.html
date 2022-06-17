@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="IMG/Escudo.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="CSS/stylepantalla_alumnos.css">
+    <script src="JS/funcionesPantallaAlumnos.js"></script>
+    <title>CATT - ESCOM</title>
+    <script>
+
+        $(document).ready(()=>{
+
+            $("form#datosGenerales").submit((e)=>{
+                
+                e.preventDefault();
+
+                let alumno1 = {
+
+                    nombre1 : $("input#nombre1").val(),
+                    apellido_pa1 : $("input#apellido_pa1").val(),
+                    apellido_ma1 : $("input#apellido_ma1").val()
+
+                }
+
+            })
+
+        })
+
+    </script>
+</head>
+<body>
+    <header class="cabeza">
+        <img src="IMG/Escudo.png" alt="Escudo de ESCOM.">
+        <nav class="navegacion">
+            <ul>
+                <li><a href="pantalla_alumnos.html">INICIO</a></li>
+                <li><a href="directores_alumnos.html">DIRECTORES</a></li>
+                <li><a href="index.html">SALIR</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="cuerpo">
+        <div>
+            <h2>Datos generales</h2>
+            <form action="#" method="post" id="datosGenerales">
+                <fieldset class="alumno1">
+                    <legend>Alumno principal</legend>
+                    <label for="nombre1">Nombre(s):</label>
+                    <input type="text" name="nombre1" id="nombre1" disabled>
+                    <label for="apellido1">Apellido Paterno:</label>
+                    <input type="text" name="apellidos1" id="apellido_pa1" disabled>
+                    <label for="apellido1">Apellido Materno:</label>
+                    <input type="text" name="apellidos1" id="apellido_ma1" disabled>
+                    <label for="boleta1">Boleta:</label>
+                    <input type="text" name="boleta1" id="boleta1" disabled>
+                    <label for="correo1">Correo eletrónico:</label>
+                    <input type="email" name="correo1" id="correo1" disabled>
+                    <label for="telefono1">Teléfono:</label>
+                    <input type="text" name="telefono1" id="telefono1" disabled>
+                </fieldset>
+                <fieldset class="alumno2">
+                    <legend>Alumno 2</legend>
+                    <label for="nombre2">Nombre(s):</label>
+                    <input type="text" name="nombre2" id="nombre2" disabled>
+                    <label for="apellido2">Apellidos:</label>
+                    <input type="text" name="apellidos2" id="apellidos2" disabled>
+                    <label for="boleta2">Boleta:</label>
+                    <input type="text" name="boleta2" id="boleta2" disabled>
+                    <label for="correo2">Correo eletrónico:</label>
+                    <input type="email" name="correo2" id="correo2" disabled>
+                    <label for="telefono2">Teléfono:</label>
+                    <input type="text" name="telefono2" id="telefono2" disabled>
+                </fieldset>
+                <fieldset class="alumno3">
+                    <legend>Alumno 3</legend>
+                    <label for="nombre3">Nombre(s):</label>
+                    <input type="text" name="nombre3" id="nombre3" disabled>
+                    <label for="apellido3">Apellidos:</label>
+                    <input type="text" name="apellidos3" id="apellidos3" disabled>
+                    <label for="boleta3">Boleta:</label>
+                    <input type="text" name="boleta3" id="boleta3" disabled>
+                    <label for="correo3">Correo eletrónico:</label>
+                    <input type="email" name="correo3" id="correo3" disabled>
+                    <label for="telefono3">Teléfono:</label>
+                    <input type="text" name="telefono3" id="telefono3" disabled>
+                </fieldset>
+                <fieldset class="alumno4">
+                    <legend>Alumno 4</legend>
+                    <label for="nombre4">Nombre(s):</label>
+                    <input type="text" name="nombre4" id="nombre4" disabled>
+                    <label for="apellido4">Apellidos:</label>
+                    <input type="text" name="apellidos4" id="apellidos4" disabled>
+                    <label for="boleta1">Boleta:</label>
+                    <input type="text" name="boleta4" id="boleta4" disabled>
+                    <label for="correo4">Correo eletrónico:</label>
+                    <input type="email" name="correo4" id="correo4" disabled>
+                    <label for="telefono4">Teléfono:</label>
+                    <input type="text" name="telefono4" id="telefono4" disabled>
+                </fieldset>
+                <fieldset class="directores">
+                    <legend>Directores</legend>
+                    <label for="nombreD1">Nombre:</label>
+                    <input type="text" name="nombreD1" id="nombreD1" disabled>
+                    <label for="apellidosD1">Apellidos:</label>
+                    <input type="text" name="apellidosD1" id="apellidosD1" disabled>
+                    <label for="nombreD2">Nombre:</label>
+                    <input type="text" name="nombreD2" id="nombreD2" disabled>
+                    <label for="apellidosD2">Apellidos:</label>
+                    <input type="text" name="apellidosD2" id="apellidosD2" disabled>
+                    <label for="nombreD3">Nombre:</label>
+                    <input type="text" name="nombreD3" id="nombreD3" disabled>
+                    <label for="apellidosD3">Apellidos:</label>
+                    <input type="text" name="apellidosD3" id="apellidosD3" disabled>
+                </fieldset>
+                <fieldset class="sinodales">
+                    <legend>Sinodales</legend>
+                    <label for="nombreS1">Nombre:</label>
+                    <input type="text" name="nombreS1" id="nombreS1" disabled>
+                    <label for="apellidosS1">Apellidos:</label>
+                    <input type="text" name="apellidosS1" id="apellidosS1" disabled>
+                    <label for="nombreS2">Nombre:</label>
+                    <input type="text" name="nombreS2" id="nombreS2" disabled>
+                    <label for="apellidosS2">Apellidos:</label>
+                    <input type="text" name="apellidosS2" id="apellidosS2" disabled>
+                    <label for="nombreS3">Nombre:</label>
+                    <input type="text" name="nombreS3" id="nombreS3" disabled>
+                    <label for="apellidosS3">Apellidos:</label>
+                    <input type="text" name="apellidosS3" id="apellidosS3" disabled>
+                </fieldset>
+                <fieldset class="TT">
+                    <legend>Datos del Trabajo Terminal TT</legend>
+                    <label for="idTT">Número de registro:</label>
+                    <input type="text" name="idTT" id="idTT" disabled>
+                    <label for="tituloTT">Título:</label>
+                    <input type="text" name="tituloTT" id="tituloTT" disabled>
+                    <label for="descripcion">Descripción</label>
+                    <textarea name="descripcion" id="descripcionTT" cols="30" rows="10" disabled></textarea>
+                </fieldset>
+                <div class="botones">
+                    <input type="button" value="Editar datos" onclick="habilitamosCampos()" id="editar">
+                    <input type="button" value="Actuzalizar datos" style="display: none;" id="actualizar">
+                    <input type="button" value="Cancelar" onclick="cancelamosEdicion()" style="display: none;" id="cancelar">
+                    <input type="button" value="Generar comprobante" id="generar">
+                </div>
+            </form>
+            <details>
+                <summary>Registrar alumnos</summary>
+                <form action="#" name="Registrar" method="post" id="Regis">
+                    <input type="text" placeholder="Boleta" maxlength="10" id="boleta" autofocus="">
+                    <input type="text" placeholder="Nombre(s)" maxlength="40" id="nombre">
+                    <input type="text" placeholder="Apellidos" maxlength="40" id="apellidos">
+                    <input type="email" placeholder="Correo Electronico" maxlength="60" id="correo">
+                    <input type="tel" placeholder="Telefono" maxlength="10" id="telefono">
+                    <button type="submit" value="Registrar" id="bts">Registrar</button>
+                </form>
+            </details>
+        </div>
+    </main>
+    <footer class="pie">
+        <p>Escuela Superior de Cómputo</p>
+        <p>Av. Juan de Dios Bátiz s/n esq. Av. Miguel Othón de Mendizabal. Colonia Lindavista. Alcaldia: Gustavo A. Madero. C. P. 07738. Ciudad de México.</p>
+        <p><a href="https://www.escom.ipn.mx">www.escom.ipn.mx</a></p>
+        <div>
+            <a href="mailto:direccion_escom@ipn.mx"><input type="image" src="ICO/Forward.ico" width="25" alt="Correo electronico"></a>
+            <a href="https://www.facebook.com/escomipnmx" target="_blank"><input type="image" src="ICO/Facebook.ico" width="25" alt="Facebook"></a>
+            <a href="https://twitter.com/escomunidad" target="_blank"><input type="image" src="ICO/Twitter.ico" width="25" alt="Twitter"></a>
+        </div>
+    </footer>
+</body>
+</html>

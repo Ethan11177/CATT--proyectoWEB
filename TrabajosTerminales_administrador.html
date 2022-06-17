@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="IMG/Escudo.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="CSS/styleTrabajosTerminales.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $(document).ready(()=>{
+            
+            $.ajax({
+                method:"POST",
+                url:"./PHP/obtencion_datos_tt_admin.php",
+                cache: false,
+                success:(respAX)=>{            
+                    let AX = JSON.parse(respAX)
+                    console.log(AX)
+
+                    var div = document.getElementById("tabla")
+
+                    for (let index = 0; index < AX.num; index++) {
+
+                            var hijo = document.createElement("tr")
+                            hijo.innerHTML = "<td>"+AX.db[index][0]+"</td><td>"+ AX.db[index][1] +"</td><td>"+ AX.db[index][2] +"</td>"
+                
+                            div.appendChild(hijo)
+                    }
+                }
+            })
+        })        
+    </script>
+    <title>CATT - ESCOM</title>
+</head>
+<body>
+    <header class="cabeza">
+        <img src="IMG/Escudo.png" alt="Escudo de ESCOM.">
+        <nav class="navegacion">
+            <ul>
+                <li><a href="./PHP/index_administrador.php">ADMINISTRADOR</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="cuerpo">
+        <div>
+            <h2>Trabajos Terminales</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Número de registro</th>
+                        <th>Título</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla">
+                </tbody>
+            </table>
+            <!-- <form action="#" method="post">
+                <label for="numeroR">Número de registro:</label>
+                <input type="text" name="numeroR" disabled>
+                <label for="titulo">Título:</label>
+                <input type="text" name="titulo" disabled>
+                <label for="boleta">Boleta (lider):</label>
+                <input type="text" name="boleta" disabled>
+                <label for="director1">Director 1:</label>
+                <input type="text" name="director1" disabled>
+                <label for="director2">Director 2:</label>
+                <input type="text" name="director2" disabled>
+                <label for="director3">Director 3:</label>
+                <input type="text" name="director3" disabled>
+                <label for="sinodal1">Sinodal 1:</label>
+                <input type="text" name="sinodal1" disabled>
+                <label for="sinodal2">Sinodal 2:</label>
+                <input type="text" name="sinodal2" disabled>
+                <label for="sinodal3">Sinodal 3:</label>
+                <input type="text" name="sinodal3" disabled>
+                <label for="descripcion">Descripción:</label>
+                <textarea name="descripcion" id="" cols="30" rows="10"></textarea>
+            </form> -->
+        </div>
+    </main>
+    <footer class="pie">
+        <p>Escuela Superior de Cómputo</p>
+        <p>Av. Juan de Dios Bátiz s/n esq. Av. Miguel Othón de Mendizabal. Colonia Lindavista. Alcaldia: Gustavo A. Madero. C. P. 07738. Ciudad de México.</p>
+        <p><a href="https://www.escom.ipn.mx">www.escom.ipn.mx</a></p>
+        <div>
+            <a href="mailto:direccion_escom@ipn.mx"><input type="image" src="ICO/Forward.ico" width="25" alt="Correo electronico"></a>
+            <a href="https://www.facebook.com/escomipnmx" target="_blank"><input type="image" src="ICO/Facebook.ico" width="25" alt="Facebook"></a>
+            <a href="https://twitter.com/escomunidad" target="_blank"><input type="image" src="ICO/Twitter.ico" width="25" alt="Twitter"></a>
+        </div>
+    </footer>
+</body>
+</html>
